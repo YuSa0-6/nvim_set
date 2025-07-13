@@ -13,6 +13,10 @@ A modern Neovim configuration with LSP, autocompletion, and Claude AI integratio
 - 📝 Autocompletion with nvim-cmp
 - 🔄 Git integration with Gitsigns
 - 🖥️ Terminal integration
+- 🎨 Gruvbox Material theme with transparency
+- 🔧 Smart auto-pairs and commenting
+- 📏 Indent guides and statusline
+- ⌨️ Which-key for keybinding discovery
 
 ## Installation
 
@@ -48,6 +52,19 @@ nvim
 ### Terminal & UI
 
 - **[toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)** - Terminal integration
+- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)** - Statusline
+- **[transparent.nvim](https://github.com/xiyaowong/transparent.nvim)** - Transparency support
+
+### Theme & UI
+
+- **[gruvbox-material](https://github.com/sainnhe/gruvbox-material)** - Color scheme
+- **[which-key.nvim](https://github.com/folke/which-key.nvim)** - Key binding hints
+- **[indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)** - Indent guides
+
+### Utilities
+
+- **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)** - Auto-close brackets
+- **[Comment.nvim](https://github.com/numToStr/Comment.nvim)** - Smart commenting
 
 ### AI Integration
 
@@ -116,6 +133,15 @@ nvim
 | `<C-l>` | Insert | Expand snippet / jump forward |
 | `<C-h>` | Insert | Jump backward in snippet |
 
+### Commenting
+
+| Key | Mode | Action |
+|-----|------|--------|
+| `gcc` | Normal | Toggle line comment |
+| `gc` | Visual | Toggle comment for selection |
+| `gbc` | Normal | Toggle block comment |
+| `gb` | Visual | Toggle block comment for selection |
+
 ### UI
 
 | Key | Mode | Action |
@@ -159,7 +185,9 @@ lua/
     ├── git.lua          # Git integration
     ├── terminal.lua     # Terminal config
     ├── claude.lua       # Claude AI integration
-    └── ...
+    ├── theme.lua        # Theme configuration
+    ├── ui.lua           # UI components (statusline, which-key)
+    └── utilities.lua    # Utilities (autopairs, comments, indent)
 ```
 
 ## Customization

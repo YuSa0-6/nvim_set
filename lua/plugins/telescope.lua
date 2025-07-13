@@ -16,6 +16,16 @@ return {
     require("telescope").setup({
       defaults = {
         file_ignore_patterns = { "node_modules", ".git/" },
+        vimgrep_arguments = {
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden",
+        },
         layout_config = {
           horizontal = {
             prompt_position = "top",
@@ -28,6 +38,13 @@ return {
           height = 0.80,
         },
         sorting_strategy = "ascending",
+      },
+      pickers = {
+        live_grep = {
+          additional_args = function()
+            return {"--hidden"}
+          end
+        },
       },
     })
 
