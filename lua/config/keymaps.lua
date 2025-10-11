@@ -5,15 +5,13 @@
 -- 透明化切り替え
 vim.keymap.set("n", "<leader>tp", function()
   if vim.g.transparency_enabled then
-    -- 透明化OFF: プラグイン設定を無効化してカラースキームを再適用
-    vim.g.gruvbox_material_transparent_background = 0
-    vim.cmd.colorscheme("gruvbox-material")
+    -- 透明化OFF: カラースキームを再適用
+    vim.cmd.colorscheme("ayu")
     vim.g.transparency_enabled = false
     print("Transparency: OFF")
   else
-    -- 透明化ON: プラグイン設定を有効化して追加の透明化設定を適用
-    vim.g.gruvbox_material_transparent_background = 2
-    vim.cmd.colorscheme("gruvbox-material")
+    -- 透明化ON: カラースキームを再適用して透明化設定を適用
+    vim.cmd.colorscheme("ayu")
     apply_transparency()
     vim.g.transparency_enabled = true
     print("Transparency: ON")

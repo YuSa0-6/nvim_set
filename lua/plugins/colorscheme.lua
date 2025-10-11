@@ -1,17 +1,13 @@
 return {
-  "sainnhe/gruvbox-material",
+  "ayu-theme/ayu-vim",
   lazy = false,
   priority = 1000,
   config = function()
-    -- ダークテーマでハードコントラストに設定
-    vim.opt.background = "dark"
-    vim.g.gruvbox_material_background = "hard"
-    vim.g.gruvbox_material_enable_italic = true
-    vim.g.gruvbox_material_better_performance = 1
-    vim.g.gruvbox_material_transparent_background = 2
+    -- ayu theme variant (mirage, light, dark)
+    vim.g.ayucolor = "light"
 
     -- カラースキームを適用
-    vim.cmd.colorscheme("gruvbox-material")
+    vim.cmd.colorscheme("ayu")
 
     -- 透明化状態を管理するグローバル変数（初期状態は有効）
     vim.g.transparency_enabled = true
@@ -28,7 +24,6 @@ return {
       vim.cmd("hi VertSplit guibg=NONE ctermbg=NONE") -- 縦分割線
       vim.cmd("hi EndOfBuffer guibg=NONE ctermbg=NONE") -- ファイル末尾以降
     end
-
 
     -- 初期透明化設定を適用
     _G.apply_transparency()
