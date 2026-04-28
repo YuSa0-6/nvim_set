@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = function()
     -- ayu theme variant (mirage, light, dark)
-    vim.g.ayucolor = "light"
+    vim.g.ayucolor = "mirage"
 
     -- カラースキームを適用
     vim.cmd.colorscheme("ayu")
